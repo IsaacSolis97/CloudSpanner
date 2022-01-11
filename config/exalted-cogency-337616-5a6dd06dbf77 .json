@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "exalted-cogency-337616",
+  "private_key_id": "5a6dd06dbf773849e3080bf1915312ed0fed8812",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDFdzw5+CMv4xzM\nWWCKsH3iMPMYz/M8SwNi0FQNgzHT59qJzgVOLhlobOjt67hou9/6tlHh37lVeVq5\n/A7BzXU5MSzraRsLfwoWjzYB+bUVSK3/FBo88twA2FLYi7mBT9Q+iXJxkmuHic6x\nnfyOk07NMNTUO+2GUWf79pKKrr+hKqvd0UiB2DDDtkVvgyVQqUOsqmiOwdGynmCl\nZfGbIPMFKw7E3I4mZYlh/e4aMOgI3M/qz2Le4tYzRp9j7QTY2HhEgRNxfYTkWINg\nt9Yvk1AtkPhu2k2Cd51ey5qva7864fR7UUO8Qr9im497DhJF6Us9uviSQyqDaIAu\nIpOFd0eBAgMBAAECggEAAmmEHt2gKVYYBHcwHcLU3ZuHs3cCO4j5DOKeiIr0UCOP\n40kjuV/1BR2BoJ189xct+v3KeguKye2z2MDGOdYTGxbwz1eIT8ZLPZmxaRZh7RpJ\nr2Gp++12yTwCpiWLbE7Gh8YdhPimHRWiOGd22icr0taNXrXg2lg7YxGG/NKhlVXT\nynX906pTF+E5ARhnoJKcnpll4891gUnDrD0pD65ig7/yRbCtM8bB2JcalEIb9s8/\n/UmG7RvgPJ6EMLCWZYklXfhWEbmXdLY/DraUfa0osUeMjXs/7L3GiYEty4BN8+nR\na+iSQL5BDPJS2AQBoFFswCBl/B51Lf1fhz4ukAs5TwKBgQDzWZ1XY3xl63Reu5H0\n7XL3aUvLPpBc2x1W9WdpTUk7UjawbDu4Tz3B6i2RNcquMmpxCJZ3IJGZUGhMibBk\niaZxuvgJUTfcWY37skfXGYI+ZLtyl5qQ8cQMne9KuHbwx9ef9IGHjHnfXceFrBVa\nTvrTB+FtAGPeofv8dBBT3nOTwwKBgQDPuwO5fXQvL98hJ+mHi1DgLNUhI6I4yzFg\n6OFmIInqAeN5p7a5iANcL1pc7IrawcDQuNTgIHOQYmy4B80fPjWcaRZm5q/QK5hW\npYnR90WNtv9Rle5+9pte5xoz4MlekjR+gPvvRhetl0xc/NUkViH3qK98B+XXn9E/\nmntw73YXawKBgEowa/OUdPxtiBDJhnnxWjdrdpwD+ucUNiGot1o3IbhgHCQ1Gw/Z\nuK5Bwpqel6f73s+PGrA+0aS4CtQqtggwnvnVUoEkra8T7mFpvNUrBbYX573L0meW\nDXr7O1TAYCKQCoDNfh/hB9a9NHLgP7JEmdt0b5lXoRrir3wLtl6bVwkZAoGBAKkj\nyyqTXbC2N+YVS27UHuwJVRiAnSvFNtWDiVPQlrr1ArUhvARhHOtImzkiWQU50beh\nZ6N+iNo9aeyGXZxc2OYcIuNyXiEP/iA+9XMC9Z0oLcfOXrz+KxAg+BLZqtzYCuoe\nOARhfBIaKVFlhF7rywiOTyScgacKOCSjsnMIZ401AoGBAInqTYt/gWPtLiGNtuOX\n2oya+CI4nwUtUp9Vc9g2LisVR1BjBUvvOoFlH4XuOryekjesv4YTGfojfg+0OZpm\n3WYjrHsDTN4rt4hNiPSi8QmDBZJBR8ZGXg6DcEgBzrL9b/IIVHkfxwBzM2VeiZEZ\nQbhbJEMAVQ5WcrIxpvKkGB3x\n-----END PRIVATE KEY-----\n",
+  "client_email": "proyectobasescloudspanner@exalted-cogency-337616.iam.gserviceaccount.com",
+  "client_id": "106728545501407541166",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/proyectobasescloudspanner%40exalted-cogency-337616.iam.gserviceaccount.com"
+}

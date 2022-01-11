@@ -4,10 +4,10 @@ const {Spanner} = require('@google-cloud/spanner');
 /**
  * TODO(developer): Uncomment the following lines before running the sample.
  */
-const projectId = 'proyectobda-336817';
-const keyFileName = './config/proyectobda-336817-b136ce86f25d.json'
-const instanceId = 'proyectobda-spanner';
-const databaseId = 'cloud-spanner';
+const projectId = 'exalted-cogency-337616';
+const keyFileName = './config/exalted-cogency-337616-5a6dd06dbf77 .json'
+const instanceId = 'proyectobases38199';
+const databaseId = 'aerolinia';
 
 // Creates a client
 const spanner = new Spanner({
