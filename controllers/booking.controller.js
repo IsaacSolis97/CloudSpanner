@@ -1,5 +1,6 @@
 const database = require('../config/db.config.js');
 const booking = database.table('booking');
+const bookingdetails = database.table('bookingdetails');
 
 module.exports = {
     get: async function (req, res) {
@@ -54,4 +55,19 @@ module.exports = {
             //await database.close();
         }
     },
+    delete: async function (req, res) {
+        var ids = [[req.params.id2,
+                    req.params.id1
+                    ]
+        ];
+        console.log(ids);
+        try {
+            await booking.deleteRows(ids);
+            res.redirect("/booking");
+        } catch (err) {
+            res.status(500).send({ message: err.message || "Error when updating passenger." })
+        } finally {
+            //await database.close();
+        }
+    }
 }

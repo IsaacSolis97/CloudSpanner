@@ -13,9 +13,9 @@ router.get('/:id', bookingController.show);
 /**
  * PUT
  */
-router.put('/:id', bookingController.update);
+router.post('/update/:id1', bookingController.update);
 /**
  * DELETE
  */
-router.delete('/:id', bookingController.delete);
+router.get('/delete/:id1/:id2', bookingController.delete);
 module.exports = router;
