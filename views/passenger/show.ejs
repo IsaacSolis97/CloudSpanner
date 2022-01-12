@@ -9,15 +9,15 @@
             <form action="/passenger/<%= data.passid %>" method="post">
                 <div class="my-3">
                     <label for="passname" class="form-label">Nombre</label>
-                    <input type="text" name="passname" value="<%= data.passname %>" class="form-control" placeholder="Nombre">
+                    <input type="text" name="passname" value="<%= data.passname %>" class="form-control" placeholder="Nombre" required>
                 </div>
                 <div class="my-3">
                     <label for="passemail" class="form-label">Correo electrónico</label>
-                    <input type="text" name="passemail" value="<%= data.passemail %>" class="form-control" placeholder="Correo electrónico">
+                    <input type="text" name="passemail" value="<%= data.passemail %>" class="form-control" placeholder="Correo electrónico" required>
                 </div>
                 <div class="my-3">
                     <label for="passdob" class="form-label">Fecha</label>
-                    <input type="date" name="passdob" value="<%= data.passdob %>" class="form-control">
+                    <input type="date" name="passdob" value="<%= data.passdob %>" class="form-control" required>
                 </div>
                 <div class="btn-toolbar my-4 justify-content-end">
                     <button type="submit" class="btn btn-primary mx-2">Guardar <i class="far fa-save"></i></button>

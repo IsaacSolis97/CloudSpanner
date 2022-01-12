@@ -26,7 +26,7 @@ module.exports = {
 
     show: async function (req, res) {
         const query = {
-            sql: `SELECT passid, passname, passemail, FORMAT_DATE("%F", passdob) as passdob 
+            sql: `SELECT passid, passname, passemail, passdob 
                 FROM passenger WHERE passid = ${req.params.id}`,
         };
         try {
@@ -51,7 +51,6 @@ module.exports = {
             passemail: req.body.passemail,
             passdob: req.body.passdob,
         }
-        console.log(fields)
         try {
             await passenger.update(fields);
             res.redirect("/passenger");
@@ -61,6 +60,17 @@ module.exports = {
             //await database.close();
         }
     },
+
+    delete: async function (req, res) {
+        try {
+            const keys = [req.params.id];
+            await passenger.deleteRows(keys);
+            res.redirect("/passenger");
+            console.log('Deleted individual rows in passenger.');
+          } catch (err) {
+            console.error('ERROR:', err);
+          }
+    }
 
 }
 

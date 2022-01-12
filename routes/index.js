@@ -14,6 +14,6 @@ router.get('/new', function(req, res, next) {
 /*
  * POST
  */
-router.post('/:id', indexController.new);
+router.post('/new', indexController.new);
 
 module.exports = router;
