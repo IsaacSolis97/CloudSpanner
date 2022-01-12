@@ -18,6 +18,10 @@ module.exports = {
         let passid = aleatorio();
         let flightid = aleatorio();
         let bookingid = aleatorio();
+        let hoy = new Date();
+        let fecha = hoy.getDate() + '/' + ( hoy.getMonth() + 1 ) + '/' + hoy.getFullYear();
+        let hora = hoy.getHours() + ':' + hoy.getMinutes() + ':' + hoy.getSeconds();
+        console.log({ bookingid: bookingid, flightid: flightid, bookdate: fecha + ' ' + hora,});
         try {
             await passengerTable.insert({
                 passid: passid,
@@ -36,7 +40,7 @@ module.exports = {
             await bookingTable.insert({
                 bookingid: bookingid,
                 flightid: flightid,
-                bookdate: new Date().toISOString().slice(0,10),
+                bookdate: fecha + ' ' + hora,
             });
             await bookingdetailsTable.insert({
                 passid: passid,

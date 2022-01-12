@@ -49,7 +49,7 @@ module.exports = {
             passid: id,
             passname: req.body.passname,
             passemail: req.body.passemail,
-            passdob: req.body.passdob,
+            passdob: req.body.passdob.replace("T", " "),
         }
         try {
             await passenger.update(fields);

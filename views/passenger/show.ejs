@@ -16,8 +16,8 @@
                     <input type="text" name="passemail" value="<%= data.passemail %>" class="form-control" placeholder="Correo electrónico" required>
                 </div>
                 <div class="my-3">
-                    <label for="passdob" class="form-label">Fecha</label>
-                    <input type="date" name="passdob" value="<%= data.passdob %>" class="form-control" required>
+                    <label for="passdob" class="form-label">Fecha actual: <%= data.passdob %></label>
+                    <input type="datetime-local" name="passdob" value="<%= data.passdob.replace(' ' , 'T') %>" class="form-control">
                 </div>
                 <div class="btn-toolbar my-4 justify-content-end">
                     <button type="submit" class="btn btn-primary mx-2">Guardar <i class="far fa-save"></i></button>
