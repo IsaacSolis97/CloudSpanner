@@ -1,32 +1,30 @@
-CREATE TABLE booking (
-  bookingid INT64 NOT NULL,
-  flightid INT64 NOT NULL,
-  bookdate DATE NOT NULL,
-) PRIMARY KEY(bookingid);
-
-CREATE TABLE bookingdetails (
-  passid INT64 NOT NULL,
-  bookingid INT64 NOT NULL,
-) PRIMARY KEY(passid, bookingid);
-
-ALTER TABLE bookingdetails ADD CONSTRAINT constraint_detail2 FOREIGN KEY(bookingid) REFERENCES booking(bookingid);
-
 CREATE TABLE flight (
   flightid INT64 NOT NULL,
-  flightsource STRING(20),
-  flightdest STRING(20),
-  flightdate DATE,
-  flightset INT64,
+  flightsource STRING(30),
+  flightdest STRING(30),
+  flightdate STRING(25),
+  flightseat INT64,
   ticketcost FLOAT64,
 ) PRIMARY KEY(flightid);
 
-ALTER TABLE booking ADD CONSTRAINT constraint_booking FOREIGN KEY(flightid) REFERENCES flight(flightid);
+CREATE TABLE booking (
+  flightid INT64 NOT NULL,
+  bookingid INT64 NOT NULL,
+  bookdate STRING(200) NOT NULL,
+) PRIMARY KEY(flightid, bookingid),
+  INTERLEAVE IN PARENT flight ON DELETE CASCADE;
 
 CREATE TABLE passenger (
   passid INT64 NOT NULL,
   passname STRING(200),
   passemail STRING(200),
-  passdob DATE,
+  passdob STRING(25),
 ) PRIMARY KEY(passid);
 
-ALTER TABLE bookingdetails ADD CONSTRAINT constraint_detail1 FOREIGN KEY(passid) REFERENCES passenger(passid);
+CREATE TABLE bookingdetails (
+  passid INT64 NOT NULL,
+  bookingid INT64 NOT NULL,
+) PRIMARY KEY(passid, bookingid),
+  INTERLEAVE IN PARENT passenger ON DELETE CASCADE;
+
+ALTER TABLE bookingdetails ADD CONSTRAINT constraint_detail2 FOREIGN KEY(bookingid) REFERENCES booking(bookingid);
