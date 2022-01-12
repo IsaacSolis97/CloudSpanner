@@ -1,0 +1,31 @@
+<%- include("../template/header", {title: "Cloud Spanner"}); %>
+<body>
+    <%- include("../template/navbar"); %>
+    <div class="div-container">
+        <div class="d-flex justify-content-between align-items-center mt-4 border-bottom">
+            <h3>Editar Reserva</h3>
+        </div>
+        <div class="container-fluid mt-5" style="width: 60%;">
+            <form action="/booking/<%= data.bookingid %>" method="put">
+                <div class="my-3">
+                    <label for="flightid" class="form-label">Vuelo</label>
+                    <input type="text" name="flightid" value="<%= data.flightid %>" class="form-control" placeholder="Vuelo id">
+                </div>
+                <div class="my-3">
+                    <label for="bookdate" class="form-label">Fecha actual: <%= data.bookdate %></label>
+                    <input type="datetime-local" name="bookdate" value="<%= data.bookdate %>" class="form-control">
+                </div>
+                <div class="btn-toolbar my-4 justify-content-end">
+                    <button type="submit" class="btn btn-primary mx-2">Guardar <i class="far fa-save"></i></button>
+                    <a class="btn btn-danger align-baseline" href="/booking/delete/<%= data.bookingid %>">Eliminar <i class="far fa-trash-alt"></i></a>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,5 +1,5 @@
-// const database = require('../config/db.config.js');
-// const passenger = database.table('passenger');
+const database = require('../config/db.config.js');
+const passenger = database.table('passenger');
 
 module.exports = {
 
@@ -11,15 +11,16 @@ module.exports = {
             },
         };        
         try {
-            // const [rows] = await passenger.read(query);
-            // let result = rows.map(row => row.toJSON());
-            // res.render('passenger/list', { data: result });
-            let result = [{ passid: 1, passname: "George Henriquez", passemail: "ghenriqu@espol.edu.ec", passdob: "2022-01-05" }]
+            const [rows] = await passenger.read(query);
+            let result = rows.map(row => row.toJSON());
             res.render('passenger/list', { data: result });
+            
+            //let result = [{ passid: 1, passname: "George Henriquez", passemail: "ghenriqu@espol.edu.ec", passdob: "2022-01-05" }]
+            //res.render('passenger/list', { data: result });
         } catch (err) {
             res.status(500).send({ message: err.message || "Error when retrieving passengers." })
         } finally {
-            // await database.close();
+            //await database.close();
         }
     },
 
@@ -29,15 +30,16 @@ module.exports = {
                 FROM passenger WHERE passid = ${req.params.id}`,
         };
         try {
-            // const [rows] = await database.run(query);
-            // let result = rows.map(row => row.toJSON());
-            // res.render('flight/show', { data: result[0] });
-            let result = { passid: 1, passname: "George Henriquez", passemail: "ghenriqu@espol.edu.ec", passdob: "2022-01-05" }
-            res.render('passenger/show', { data: result });
+            const [rows] = await database.run(query);
+            let result = rows.map(row => row.toJSON());
+            
+            res.render('passenger/show', { data: result[0] });
+            //let result = { passid: 1, passname: "George Henriquez", passemail: "ghenriqu@espol.edu.ec", passdob: "2022-01-05" }
+            //res.render('passenger/show', { data: result });
         } catch (err) {
             res.status(500).send({ message: err.message || "Error when retrieving passenger." })
         } finally {
-            // await database.close();
+            //await database.close();
         }
     },
 
@@ -51,12 +53,12 @@ module.exports = {
         }
         console.log(fields)
         try {
-            // await passenger.update(fields);
+            await passenger.update(fields);
             res.redirect("/passenger");
         } catch (err) {
             res.status(500).send({ message: err.message || "Error when updating passenger." })
         } finally {
-            // await database.close();
+            //await database.close();
         }
     },
 

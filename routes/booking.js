@@ -5,6 +5,17 @@ var router = express.Router();
 /*
  * GET
  */
-// router.get('/:id', bookingController.show);
-
+router.get('/', bookingController.get);
+/**
+ * GET by id
+ */
+router.get('/:id', bookingController.show);
+/**
+ * PUT
+ */
+router.put('/:id', bookingController.update);
+/**
+ * DELETE
+ */
+router.delete('/:id', bookingController.delete);
 module.exports = router;
