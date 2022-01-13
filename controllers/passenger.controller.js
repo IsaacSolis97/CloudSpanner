@@ -4,19 +4,14 @@ const passenger = database.table('passenger');
 module.exports = {
 
     get: async function (req, res) {
+        let condition = req.query.passname ? `WHERE passname = "${req.query.passname}"` : "";
         const query = {
-            columns: ['passid', 'passname', 'passemail', 'passdob'],
-            keySet: {
-              all: true,
-            },
-        };        
+            sql: `SELECT * FROM passenger ${condition}`,
+        };
         try {
-            const [rows] = await passenger.read(query);
+            const [rows] = await database.run(query);
             let result = rows.map(row => row.toJSON());
             res.render('passenger/list', { data: result });
-            
-            //let result = [{ passid: 1, passname: "George Henriquez", passemail: "ghenriqu@espol.edu.ec", passdob: "2022-01-05" }]
-            //res.render('passenger/list', { data: result });
         } catch (err) {
             res.status(500).send({ message: err.message || "Error when retrieving passengers." })
         } finally {
@@ -70,7 +65,7 @@ module.exports = {
           } catch (err) {
             console.error('ERROR:', err);
           }
-    }
+    },
 
 }
 
